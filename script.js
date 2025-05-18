@@ -57,7 +57,7 @@ function init() {
     score = 0
     scoreElement.innerHTML = 0
     isGameOver = false
-    genetatePlayField()
+    generatePlayField()
     generateTetromino()
     cells = document.querySelectorAll('.grid div')
     moveDown()
@@ -96,7 +96,7 @@ function countScore(destroyRows){
     scoreElement.innerHTML = score
 }
 
-function genetatePlayField(){
+function generatePlayField(){
     for (let i = 0; i < PLAYFIELD_ROWS * PLAYFIELD_COLUMNS; i++){
         const div = document.createElement('div');       //створити елемент
         document.querySelector('.grid').append(div);     // схопити елемент               
@@ -233,7 +233,7 @@ function rotate(){
 document.addEventListener('keydown', onKeyDown)
 function onKeyDown(e){
     //console.log(e.key)
-    if(e.key == 'Escape'){
+    if(e.key === 'Escape'){
         togglePauseGame()
     }
     if (!isPaused){
@@ -265,13 +265,13 @@ function dropTetrominoDown() {
     tetromino.row--    
 }
 
-function rotateMatrix(maatrixTetromino){
-    const N = maatrixTetromino.length
+function rotateMatrix(matrixTetromino){
+    const N = matrixTetromino.length
     const rotateMatrix = []
     for(let i = 0; i < N; i++){
         rotateMatrix[i] = []
         for(let j = 0; j < N; j++){
-            rotateMatrix[i][j] = maatrixTetromino[N - j - 1][i]
+            rotateMatrix[i][j] = matrixTetromino[N - j - 1][i]
         }
     }
     return rotateMatrix
