@@ -15,9 +15,9 @@ body{
     border: 5px solid greenyellow;
     border-radius: 10px;
     margin-left: 50px;
-    padding: 50px;
+    padding: 30px;
     font-size: 50px;
-    box-shadow: 0px 2px 5px 7px rgb(99, 97, 97);
+    box-shadow: 0 2px 5px 7px rgb(99, 97, 97);
 }
 
 .overlay{
@@ -40,7 +40,7 @@ body{
     border-radius: 20px;
     border: none;
     font-size: 45px;
-    box-shadow: 0px 2px 5px 7px rgb(39, 38, 38);
+    box-shadow: 0 2px 5px 7px rgb(39, 38, 38);
     cursor: pointer;
 }
 
@@ -82,4 +82,24 @@ body{
 }
 .grid .Z{
     background-color: rgb(248, 8, 8);
+}
+
+/*.container {*/
+/*    margin-left: 40px;*/
+/*}*/
+.container p {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 28px;
+    font-weight: 100;
+}
+.container p span {
+    margin-left: 80px;
+    font-weight: 100;
+}
+.container .counter {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 100;
 }
