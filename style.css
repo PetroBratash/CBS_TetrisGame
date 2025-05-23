@@ -1,17 +1,16 @@
-*{
+* {
     margin: 0;
 }
 
-body{
-    background: 
-    linear-gradient(45deg, aqua, violet);
+body {
+    background: linear-gradient(45deg, aqua, violet);
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.container{
+.container {
     border: 5px solid greenyellow;
     border-radius: 10px;
     margin-left: 50px;
@@ -20,7 +19,7 @@ body{
     box-shadow: 0 2px 5px 7px rgb(99, 97, 97);
 }
 
-.overlay{
+.overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -32,11 +31,10 @@ body{
     align-items: center;
 }
 
-.btn-restart{
+.btn-restart {
     width: 200px;
     height: 150px;
-    background: 
-        linear-gradient(320deg, #b4d415, rgb(230, 81, 7));
+    background: linear-gradient(320deg, #b4d415, rgb(230, 81, 7));
     border-radius: 20px;
     border: none;
     font-size: 45px;
@@ -45,7 +43,7 @@ body{
 }
 
 
-.grid{
+.grid {
     background: rgba(43, 43, 68, 0.65);
     padding: 0.5vh;
     display: grid;
@@ -53,40 +51,43 @@ body{
     gap: 0.3vh;
 }
 
-.grid div{
+.grid div {
     height: min(4vh, 7vw);
     width: min(4vh, 7vw);
     background-color: rgba(213, 210, 210, 0.3);
-    border: 0.1vh outset;                           /*  border style  */
+    border: 0.1vh outset; /*  border style  */
     border-radius: 0.4vh;
 
 }
 
-.grid .O{
+.grid .O {
     background-color: rgb(246, 246, 11);
 }
-.grid .J{
+
+.grid .J {
     background-color: rgb(5, 22, 255);
 }
-.grid .L{
+
+.grid .L {
     background-color: rgb(250, 169, 19);
 }
-.grid .I{
+
+.grid .I {
     background-color: rgb(151, 247, 7);
 }
-.grid .S{
+
+.grid .S {
     background-color: rgb(7, 250, 7);
 }
-.grid .T{
+
+.grid .T {
     background-color: rgb(251, 7, 251)
 }
-.grid .Z{
+
+.grid .Z {
     background-color: rgb(248, 8, 8);
 }
 
-/*.container {*/
-/*    margin-left: 40px;*/
-/*}*/
 .container p {
     display: flex;
     align-items: center;
@@ -94,10 +95,12 @@ body{
     font-size: 28px;
     font-weight: 100;
 }
+
 .container p span {
     margin-left: 80px;
     font-weight: 100;
 }
+
 .container .counter {
     display: flex;
     justify-content: space-between;

@@ -2,6 +2,7 @@ const PLAYFIELD_COLUMNS = 10
 const PLAYFIELD_ROWS    = 20
 const btnRestart = document.querySelector('.btn-restart')
 const scoreElement = document.querySelector('.score')
+const bestScoreElement = document.querySelector('.best-score')
 const overlay = document.querySelector('.overlay')
 
 let isGameOver = false
@@ -10,6 +11,7 @@ let isPaused = false
 let playfield;
 let tetromino;
 let score = 0;
+let bestScore = 0;
 
 const TETROMINO_NAMES = ['O', 'J', 'L', 'I', 'S', 'T', 'Z']
 const TETROMINOES = {
@@ -94,6 +96,10 @@ function countScore(destroyRows){
                 break
     }
     scoreElement.innerHTML = score
+    if(score > bestScore){
+        bestScore = score
+       bestScoreElement.innerHTML = bestScore
+    }
 }
 
 function generatePlayField(){
