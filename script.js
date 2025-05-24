@@ -81,7 +81,7 @@ function convertPositionToIndex(row, column) {
     return row * PLAYFIELD_COLUMNS + column
 }
 
-function getRandomelement(array) {
+function getRandomElement(array) {
     const randomIndex = Math.floor(Math.random() * array.length)
     return array[randomIndex]
 }                                                                         // рандом ф
@@ -120,14 +120,14 @@ function generatePlayField() {
 
 function generateTetromino() {
 
-    const name = getRandomelement(TETROMINO_NAMES)                       // рандом
+    const name = getRandomElement(TETROMINO_NAMES)                       // рандом
     const matrix = TETROMINOES[name]
     const column = PLAYFIELD_COLUMNS / 2 - Math.floor(matrix.length / 2)   //центр ф
-    const rowTetro = -2
+    const rowOffset = -2
     tetromino = {
         name,
         matrix,
-        row: rowTetro,
+        row: rowOffset,
         column: column                                                    // центр (4)
     }
 }
@@ -136,7 +136,7 @@ function placeTetromino() {
     const matrixSize = tetromino.matrix.length
     for (let row = 0; row < matrixSize; row++) {
         for (let column = 0; column < matrixSize; column++) {
-            if (isOutsideOfTopboard(row)) {
+            if (isOutsideOfTopBoard(row)) {
                 isGameOver = true
                 return
             }
@@ -202,7 +202,7 @@ function drawTetromino() {
 
     for (let row = 0; row < tetrominoMatrixSize; row++) {
         for (let column = 0; column < tetrominoMatrixSize; column++) {
-            if (isOutsideOfTopboard(row)) continue
+            if (isOutsideOfTopBoard(row)) continue
             if (!tetromino.matrix[row][column]) continue
             const cellIndex = convertPositionToIndex(
                 tetromino.row + row,
@@ -364,7 +364,7 @@ function isValid() {
     return true
 }
 
-function isOutsideOfTopboard(row) {
+function isOutsideOfTopBoard(row) {
     return tetromino.row + row < 0
 }
 
